@@ -4539,6 +4539,12 @@ input[type="submit"].btn.btn-mini {
   filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
 
+.navbar .navbar-nav {
+
+  display: inline-block;
+  vertical-align: top;
+}
+
 .navbar-inverse .btn-navbar:hover,
 .navbar-inverse .btn-navbar:active,
 .navbar-inverse .btn-navbar.active,

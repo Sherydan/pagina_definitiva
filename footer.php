@@ -1,7 +1,10 @@
 <!-- Footer ------------------------------------------------------ -->
+<!--<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+<link href="bootstrap/css/footer-distributed-with-address-and-phones.css" rel="stylesheet" media="screen">
 <hr class="soft">
 <div  id="footerSection">
-	<div class="row">
+ <div class="footer-distributed">
+ 	<div class="row">
 		<div class="span3">
 			<h5>Informacion</h6>
 			<a href="?open=CaraMember"><font  color="Blue">Ser Miembro?</font></a>
@@ -32,12 +35,17 @@
 	 </div>
 	 <hr class="soft">
 	<p class="pull-left">&copy;2016 <font color= "red"><b>Platea21</b></font> <font color="green"><b>Platea21</b></font> <font color="grey"><b>Tienda Online</b></font></p>
+
+ 	
+ </div>
+	
 </div><!-- /container -->
 
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="assets/js/jquery.js"></script>
 	<script src="assets/js/google-code-prettify/prettify.js"></script>

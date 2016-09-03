@@ -6,6 +6,8 @@ include_once "library/inc.library.php";
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta charset="utf-8">
     <title>San Fernando Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,10 +48,11 @@ include_once "library/inc.library.php";
 <body>
   <!-- Navbar
     ================================================== -->
-<div class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="navbar navbar-inverse" role="navigation">
               <div class="navbar-inner">
                 <div class="container">
-					<a id="logoM" href="index.php"></a>
+          <a id="logoM" href="index.php"></a>
                   <a data-target="#sidebar" data-toggle="collapse" class="btn btn-navbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -57,25 +60,30 @@ include_once "library/inc.library.php";
                   </a>
                   <div class="nav-collapse">
                     <ul class="nav">
-					  <li class=""><a href="index.php">Inicio	</a></li>
-					  <li class=""><a href="?open=Barang-Produk">Productos</a></li>
-					  <li class=""><a href="?open=About">Acerca</a></li>
-					  <li class=""><a href="?open=Contact-Us">Contactos</a></li>
-					  <li class=""><a href="#">Noticias</a></li>
-					</ul>
+            <li class=""><a href="index.php">Inicio </a></li>
+            <li class=""><a href="?open=Barang-Produk">Productos</a></li>
+            <li class=""><a href="?open=About">Acerca</a></li>
+            <li class=""><a href="?open=Contact-Us">Contactos</a></li>
+            <li class=""><a href="#">Noticias</a></li>
+          </ul>
                      <form action="?open=BarangPencarian" method="POST" name="form1" class="navbar-search pull-left">
                      <input name="txtKeyword" id="srchFld" type="text" size="30" placeholder="Buscar......" class="search-query span5"/> <input type="submit" name="btnCari" value="Buscar">
                     </form>
-                   					    
-					<ul class="nav pull-right">
-					<?php include_once "inc.login_status.php"; ?>
-					
-					</ul>
-				
+                                
+          <ul class="nav pull-right">
+          <?php include_once "inc.login_status.php"; ?>
+          
+          </ul>
+        
                   </div><!-- /.nav-collapse -->
                 </div>
               </div><!-- /navbar-inner -->
             </div>
+
+
+      
+    </div>
+
 <!-- ======================================================================================================================== -->	
 <div id="mainBody" class="container">
 <header id="header">
