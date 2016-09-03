@@ -7,7 +7,7 @@ include_once "library/inc.library.php";
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Platea21 Tienda Online</title>
+    <title>San Fernando Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Platea21 Tienda Online Productos Electronicos">
     <meta name="author" content="platea21">
@@ -61,7 +61,7 @@ include_once "library/inc.library.php";
 					  <li class=""><a href="?open=Barang-Produk">Productos</a></li>
 					  <li class=""><a href="?open=About">Acerca</a></li>
 					  <li class=""><a href="?open=Contact-Us">Contactos</a></li>
-					  <li class=""><a href="http://www.platea21.com/exchanger-retiro-recarga-paypal-peru/">Servicios Paypal</a></li>
+					  <li class=""><a href="#">Noticias</a></li>
 					</ul>
                      <form action="?open=BarangPencarian" method="POST" name="form1" class="navbar-search pull-left">
                      <input name="txtKeyword" id="srchFld" type="text" size="30" placeholder="Buscar......" class="search-query span5"/> <input type="submit" name="btnCari" value="Buscar">
