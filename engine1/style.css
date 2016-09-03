@@ -382,3 +382,11 @@
 		display: none
 	}
 }
+
+#colorcategoria {
+background-color:red;
+border: #000 1px solid ; 
+margin: 4px 4px 4px 4px ; 
+color:#ffffff;
+font:130% sans-serif;
+}

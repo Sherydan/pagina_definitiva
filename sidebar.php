@@ -1,6 +1,6 @@
 
 <div id="sidebar" class="span3">
-		<div class="well well-small">Categorias</div>
+		<div class="well well-small" id="colorcategoria" >Categorias</div>
 		<ul id="sideManu" class="nav nav-tabs nav-stacked">
 				<?php
 include_once "library/inc.connection.php";
