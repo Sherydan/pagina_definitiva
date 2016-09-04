@@ -103,8 +103,8 @@ include_once "library/inc.library.php";
           </ul>
           
                                 
-          <ul class="nav pull-right">
-          <?php include_once "inc.login_status.php"; ?>
+          <ul id ="nombre" class="nav pull-right">
+          <span>Usuario :</span><?php include_once "inc.login_status.php"; ?>
           
           </ul>
         
