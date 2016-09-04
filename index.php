@@ -73,7 +73,6 @@ include_once "library/inc.library.php";
 
 </div>
 
-<div class="clear"> </div>
 
 
  
@@ -126,6 +125,17 @@ include_once "library/inc.library.php";
 <div class="row">
 <div class="span12">
 	<a id="logoM" href="index.php"><img src="assets/img/main_logo.png"></a>
+  <!--INICIO MSJE BIENVENIDA -->
+  <div class="container">
+  <div class="msje_bienvenida"> 
+  <P> Bienvenido A San Fernando Store </P>
+
+  </div>
+
+
+   </div>
+
+   <!--FIN MSJE BIENVENIDA -->
 <div class="pull-right"> <br/>
 <!--- ============ pojok kanan Atas
 	<a href="product_summary.html"> <span class="btn btn-mini btn-warning"> <i class="icon-shopping-cart icon-white"></i> [ 3 ] </span> </a>
