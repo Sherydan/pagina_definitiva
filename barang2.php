@@ -108,7 +108,7 @@ while ($barangData = mysql_fetch_array($barangSql))
 		</div>
 		<div class="span3 alignR">
 			<form class="form-horizontal qtyFrm">
-			<h3>S/.<?php echo format_angka($barangData['harga_jual']); ?></h3>
+			<h3>$<?php echo format_angka($barangData['harga_jual']); ?></h3>
 			<br/>
 			  <a href="?open=Barang-Beli&Kode=<?php echo $KodeBarang; ?>&stok=<?php echo $stok; ?>" class="btn btn-primary btn-large"><i class=" icon-shopping-cart"></i> Agregar a Carrito</a>
 			  <a href="?open=Barang-Lihat&Kode=<?php echo $KodeBarang; ?>" class="btn btn-large">VER</a>
@@ -123,7 +123,7 @@ while ($barangData = mysql_fetch_array($barangSql))
 						  <p>
 							<?php echo $marca; ?>
 						  </p>
-						  <h4><a class="btn btn-large" href="?open=Barang-Lihat&Kode=<?php echo $codigo; ?>">VER</a> <span class="pull-right">S/.<?php echo format_angka($precio); ?></span></h4>
+						  <h4><a class="btn btn-large" href="?open=Barang-Lihat&Kode=<?php echo $codigo; ?>">VER</a> <span class="pull-right">$<?php echo format_angka($precio); ?></span></h4>
 						</div>
 					  </div>
 					</li>-->
