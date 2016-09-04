@@ -122,7 +122,7 @@ if($cekQty < 1){
                 <tr>
                   <th>Producto</th>
                   <th>Nombre Producto</th>
-                  <th>Precio (S/.)</th>
+                  <th>Precio ($)</th>
 				  <th>Cantidad</th>
                   <th colspan="2">Total</th>
 
@@ -161,18 +161,18 @@ if($cekQty < 1){
                   <td> <img width="60" src="assets/products/<?php echo $fileGambar; ?>" width="70" alt=""/></td>
                   <td><b><?php echo $myData['nm_barang']; ?> </b></td>
 
-                  <td>S/. <?php echo format_angka($myData['harga']); ?></td>
+                  <td>$ <?php echo format_angka($myData['harga']); ?></td>
                   <td><input name="txtJum[]" type="text" value="<?php echo $myData['jumlah']; ?>" width="2" >
                   <input name="txtKodeH[]" style="width:0px;"type="hidden" value="<?php echo $myData['kd_barang']; ?>"></td>
 
-                  <td> S/. <?php echo format_angka($total); ?></td>
+                  <td> $ <?php echo format_angka($total); ?></td>
                   <td><a href="?open=KeranjangBelanja&aksi=Hapus&idHapus=<?php echo $myData['id']; ?>"><img src="images/hapus.gif" alt="Eliminar datos de Compra" width="16" height="16" border="0"></a></td>
                 </tr>
 
                 <?php } ?>
 				 <tr>
                   <td colspan="4" align="right"><strong>TOTAL</strong></td>
-                  <td class="label label-important" colspan="2"> <strong><?php echo "S/.".format_angka($grandTotal); ?> </strong></td>
+                  <td class="label label-important" colspan="2"> <strong><?php echo "$".format_angka($grandTotal); ?> </strong></td>
                 </tr>
                     <tr>
                             <td colspan="4">&nbsp;</td>

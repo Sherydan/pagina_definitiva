@@ -247,7 +247,7 @@ Por favor, continúe compras con el método de pago elegido
 <table class="table table-bordered" border="1">
     <thead>
         <tr>
-          <td colspan="3" bgcolor="#CCCCCC"><strong>Nro. Cuenta <font color="red" align="center"><b>Platea21</b></font> <font color="green"><b>SIT<b></font></strong></td>
+          <td colspan="3" bgcolor="#CCCCCC"><strong>Nro. Cuenta <font color="red" align="center"><b>San Fernando Store/b></font> <font color="green"><b>SIT<b></font></strong></td>
         </tr>
     </thead>
     <tbody>

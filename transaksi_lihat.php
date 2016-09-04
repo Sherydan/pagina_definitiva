@@ -248,7 +248,7 @@ Por favor, continúe compras con el método de pago elegido
 <table class="table table-bordered" border="1">
     <thead>
         <tr>
-          <td colspan="3" bgcolor="#CCCCCC"><strong>Nro Cuenta<font color="red" align="center"><b>SIT</b></font> <font color="green"><b>Platea21<b></font></strong></td>
+          <td colspan="3" bgcolor="#CCCCCC"><strong>Nro Cuenta<font color="red" align="center"><b>SIT</b></font> <font color="green"><b>San Fernando Store<b></font></strong></td>
         </tr>
     </thead>
     <tbody>
@@ -256,7 +256,7 @@ Por favor, continúe compras con el método de pago elegido
             <td colspan="2" width="20%"><img src="images/BCP.jpg"></td>
             <td><p><strong>  
             Numero de Cuenta         : 540-24103460-0-53<br />
-            Nombre Beneficiario      : Julio Cesar B<br />
+            Nombre Beneficiario      : Luis Tobar C.<br />
             </strong></p></td>
       </tr>
       <!--<tr>

@@ -12,7 +12,7 @@ include_once "library/inc.library.php";
     <meta charset="utf-8">
     <title>San Fernando Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Platea21 Tienda Online Productos Electronicos">
+    <meta name="description" content="San Fernando Store">
     <meta name="author" content="platea21">
 	<!-- Less styles  
 	<link rel="stylesheet/less" type="text/css" href="less/bootsshop.less">
@@ -61,7 +61,7 @@ include_once "library/inc.library.php";
           <li><a href="signup.php">Registrarse</a></li>
           <li><a href="#">Entregas</a></li>
           <li><a href="#">Mi cuenta</a></li>
-          <li><a href="logout.php">Salir</a></li>
+          <li><a href="login_out.php">Salir</a></li>
         </ul>
       </div>
 </div>
