@@ -1,64 +1,6 @@
 <!-- Footer ------------------------------------------------------ -->
 <hr class="soft">
-<<<<<<< HEAD
-<div class="mifooter"  class="footer">
-      <div class="wrap">  
-       <div class="section group">
-        <div class="col_1_of_4 span_1_of_4">
-            <h4>Informacion</h4>
-            <ul>
-            <li><a href="about.html">Acerca</a></li>
-            <li><a href="contact.html">Servicio al Cliente</a></li>
-            <li><a href="#">Busqueda Ananzada</a></li>
-            <!--<li><a href="delivery.html">Orders and Returns</a></li>-->
-            <li><a href="contact.html">Contacto</a></li>
-            </ul>
-          </div>
-        <div class="col_1_of_4 span_1_of_4">
-          <h4>Como Comprar con nosotros</h4>
-            <ul>
-            <li><a href="about.html">Acerca</a></li>
-            <li><a href="contact.html">Servicios</a></li>
-            <li><a href="#">Politica de Privacidad</a></li>
-          <!--<li><a href="delivery.html">Orders and Returns</a></li>-->
-            <li><a href="#">Buscar Terminos</a></li>
-            </ul>
-        </div>
-        <div class="col_1_of_4 span_1_of_4">
-          <h4>Mi Cuenta</h4>
-            <ul>
-              <li><a href="contact.html">Registrarse</a></li>
-              <li><a href="index.html">Ver Tarjeta</a></li>
-                  <li><a href="#">Ver mis ordenes</a></li>
-              <li><a href="contact.html">Ayuda</a></li>
-            </ul>
-        </div>
-        <div class="col_1_of_4 span_1_of_4">
-          <h4>Contacto</h4>
-            <ul>
-              <li><span>+569-99675432</span></li>
-              <li><span>+569-99675435</span></li>
-            </ul>
-            <div class="social-icons">
-              <h4>Siguenos en:</h4>
-                  <ul>
-                    <li><a href="#" target="_blank"><img src="images/facebook.png" alt=""></a></li>
-                    <li><a href="#" target="_blank"><img src="images/twitter.png" alt=""></a></li>
-                    <li><a href="#" target="_blank"><img src="images/skype.png" alt=""> </a></li>
-                    <li><a href="#" target="_blank"> <img src="images/dribbble.png" alt=""></a></li>
-                    <li><a href="#" target="_blank"> <img src="images/linkedin.png" alt=""></a></li>
-                    <div class="clear"></div>
-                 </ul>
-              </div>
-        </div>
-      </div>      
-        </div>
-        <div class="copy_right">
-        <p>Compañia San fernando Store  © All rights Reseverd | Design by  <a href="#">Ingenieria Informatica AIEP 2016</a> </p>
-       </div>
-       
-    </div>
-=======
+
 <div  id="footerSection">
 	<div class="row">
 		<div class="span3">
@@ -90,9 +32,9 @@
 		 </div> 
 	 </div>
 	 <hr class="soft">
-	<p class="pull-left">&copy;2016 <font color= "red"><b>Platea21</b></font> <font color="green"><b>Platea21</b></font> <font color="grey"><b>Tienda Online</b></font></p>
+	<p class="pull-right"> Compañia San fernando Store  © All rights Reseverd | Design by  Ingenieria Informatica AIEP 2016</p>
 </div><!-- /container -->
->>>>>>> origin/master
+
 
 
     <!-- Le javascript
