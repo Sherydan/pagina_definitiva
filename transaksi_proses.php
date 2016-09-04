@@ -153,9 +153,36 @@ $dataNotelpon   =isset($_POST['txtNotelpon']) ? $_POST['txtNotelpon'] :'';
         <link rel="apple-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-72-precomposed.png">
     <script type="text/javascript" src="jquery.js"></script>
+     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
         <script type="text/javascript">
+
+function validarTarjetas(){
+
+  
+  visa = document.getElementById("visa").value;
+
+  visa_error = "";
+  mastercard_error = "";     
+     
+  if (!visa.match(/^4\d{3}-?\d{4}-?\d{4}-?\d{4}$/)) {
+    visa_error = "No es un número de Visa correcto";
+
+  
+ // if (!mastercard.match(/^5[1-5]\d{2}-?\d{4}-?\d{4}-?\d{4}$/))
+    //mastercard_error = "No es un número de Mastercard correcto";
+  
+   $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>ERROR: No es un número de Visa correcto</div>");
+
+   
+  
+  } else {
+     $("#message").html("<div class=\"alert alert-success\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button> Numero de Visa correcto </div>");
+  }
+
+}
 var htmlobjek;
 $(document).ready(function(){
+
   //apabila terjadi event onchange terhadap object <select id=propinsi>
   $("#propinsi").change(function(){
     var propinsi = $("#propinsi").val();
@@ -183,6 +210,7 @@ $(document).ready(function(){
   });
 });
 
+
 </script>
 
     </head>
@@ -202,9 +230,9 @@ $(document).ready(function(){
                     <tr>
                         <td><strong>No</strong></td>
                         <td><strong>Nombre Productos</strong></td>
-                        <td><strong>Precio (S/.)</strong></td>
+                        <td><strong>Precio CLP ($)</strong></td>
                         <td><strong>Cantidad</strong></td>
-                        <td align="right"><strong>Total (S/).</strong></td>
+                        <td align="right"><strong>Total CLP ($).</strong></td>
                     </tr>
                     </tbody>
                   
@@ -235,15 +263,15 @@ $(document).ready(function(){
                     <tr>
                         <td align="center" width="4%"><?php echo $nomor; ?></td>
                         <td align="center"><?php echo $myData['nm_barang']; ?></td>
-                        <td>S/. <?php echo format_angka($myData['harga']); ?></td>
+                        <td>$ <?php echo format_angka($myData['harga']); ?></td>
                         <td> <?php echo $myData['jumlah']; ?></td>
-                        <td align="right">S/. <?php echo format_angka($subTotal); ?> </td>
+                        <td align="right">$ <?php echo format_angka($subTotal); ?> </td>
                     </tr>
                     <?php } ?>
                     <tr>
                         <td colspan="3" align="right"><b>TOTAL :</b></td>
                         <td align="center" bgcolor="#F5F5F5"><?php echo $totalBarang; ?></td>
-                        <td align="right" bgcolor="#F5F5F5">S/. <?php echo format_angka($totalHarga); ?></td>
+                        <td align="right" bgcolor="#F5F5F5">$ <?php echo format_angka($totalHarga); ?></td>
                     </tr>
                     
                     </tbody>
@@ -252,7 +280,9 @@ $(document).ready(function(){
      <div class="alert alert-block alert-info fade in">
         <!--<button type="button" class="close" data-dismiss="alert">×</button>-->
         <strong> Verifique la dirección de destino del envío. Cambie la dirección de envío si es diferente de la dirección inicial.</strong>
+    
      </div>
+
         <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
         <table class="table table-striped table-bordered">
             <tbody>
@@ -303,9 +333,20 @@ $(document).ready(function(){
                 <td><div class="controls">
                     <select type="text" id="methodpayment" name="cmbPayment">
                         <option value="BLANK">-Seleccione Metodo de Pago- </option>
-                        <option>Transferencia Bancaria</option>
-                        <option>Pago en Efectivo</option>
+                          <option value="2">Visa</option>
+                   
+
                     </select><font color="Red"> <b>Seleccione Metodo de Pago</b></font>
+                </div></td>
+            </tr>
+         <td><label class="control-label">Tarjeta de Visa</label></td>
+                <td><div class="controls">
+    <input class="span5" name="visa" onBlur="validarTarjetas();" type="text" id="visa" placeholder="N° Tarjeta" maxlength="16" >
+                </div></td>
+            </tr>
+  <td><label class="control-label">Clave</label></td>
+                <td><div class="controls">
+                <input class="span5" name="clavetarj" type="password" id="inputclavetarj" placeholder="Clave" maxlength="4">
                 </div></td>
             </tr>
             <tr>
@@ -334,11 +375,11 @@ $(document).ready(function(){
             </tr>
             <tr>
                 <td><div class="control-group">
-                    <label class="control-label" for="state">Ciudad/Provincia<sup>*</sup></label>
+                    <label class="control-label" for="state">Comuna<sup>*</sup></label>
                 </div></td>
                 <td><div class="controls">
                     <select type="text" id="kota" name="kota">
-                        <option value="BLANK">-Seleccione Ciudad/Provinca-</option>
+                        <option value="BLANK">-Seleccione Region-</option>
                         <?php
                         //MENGAMBIL NAMA KOTA DI DATABASE
                         $kota=@mysql_query("SELECT * FROM kabkot ORDER BY nama_kabkot");
@@ -357,7 +398,7 @@ $(document).ready(function(){
             </tr>
             <tr>
                 <td><div>
-                    <label class="control-label" for="kecamatan">Distrito<sup>*</sup></label>
+                    <label class="control-label" for="kecamatan">Region<sup>*</sup></label>
                 </div></td>
                 <td>
                     <div class="controls">
@@ -383,8 +424,9 @@ $(document).ready(function(){
             </tr>
             </tbody>
         </table>   
-        <input class="btn btn-large pull-right" name="btnSimpan" type="submit" value="PAGAR"> 
-        </form>       
+        <input class="btn btn-large pull-right" id="pagar" name="btnSimpan" type="submit" value="PAGAR"> 
+        </form>  
+            <div id="message"></div>     
            <div>
         <!--<form method="post" action="<?php echo "check_out2.php";?>">
             <input name="txtNamaH" type="hidden" value="<?php echo $dataNama; ?>">
@@ -452,5 +494,7 @@ $(document).ready(function(){
             </div>
 <div>
 </div>
+
     </body>
     </html>
+
