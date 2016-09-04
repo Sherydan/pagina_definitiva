@@ -479,10 +479,16 @@ left:500px;
 #nombre{
 color:red;
 position:absolute;	
-top:115px;
-left:1110px;
+top:110px;
+left:1130px;
 }
 
+#nombre2{
+color:white;
+position:absolute;	
+top:110px;
+left:1180px;
+}
 
 #mifooter{
 height: 400px;

@@ -103,12 +103,14 @@ include_once "library/inc.library.php";
             <li class=""><a href="#">Noticias</a></li>
           </ul>
           
-                                
-          <ul id ="nombre" class="nav pull-right">
-          <span>Usuario :</span><?php include_once "inc.login_status.php"; ?>
-          
-          </ul>
+        <div id="nombre">       
         
+       <span> Usuario  </span> 
+          
+        </div> 
+        <div id="nombre2">
+         <?php include_once "inc.login_status.php"; ?>
+        </div>
                   </div><!-- /.nav-collapse -->
                 </div>
               </div><!-- /navbar-inner -->
