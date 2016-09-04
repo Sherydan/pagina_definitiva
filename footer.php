@@ -35,7 +35,7 @@
             </ul>
         </div>
         <div class="col_1_of_4 span_1_of_4">
-          <h4>Contact0</h4>
+          <h4>Contacto</h4>
             <ul>
               <li><span>+569-99675432</span></li>
               <li><span>+569-99675435</span></li>
