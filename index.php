@@ -101,9 +101,7 @@ include_once "library/inc.library.php";
             <li class=""><a href="?open=Contact-Us">Contactos</a></li>
             <li class=""><a href="#">Noticias</a></li>
           </ul>
-                     <form action="?open=BarangPencarian" method="POST" name="form1" class="navbar-search pull-left">
-                     <input name="txtKeyword" id="srchFld" type="text" size="30" placeholder="Buscar......" class="search-query span5"/> <input type="submit" name="btnCari" value="Buscar">
-                    </form>
+          
                                 
           <ul class="nav pull-right">
           <?php include_once "inc.login_status.php"; ?>
@@ -124,11 +122,15 @@ include_once "library/inc.library.php";
 <header id="header">
 <div class="row">
 <div class="span12">
-	<a id="logoM" href="index.php"><img src="assets/img/main_logo.png"></a>
+<a id="logoM" href="index.php"><img id="hola" src="assets/img/main_logo.png"></a> 
+<form id="formulario" action="?open=BarangPencarian" method="POST" name="form1" class="navbar-search pull-left">
+<input name="txtKeyword" id="srchFld" type= "text" size="30" placeholder="Buscar......" class="w3-input"/> 
+<button type="submit" class="btn btn-primary" name="btnCari" value="Buscar">Buscar</button>        
+</form>  
   <!--INICIO MSJE BIENVENIDA -->
   <div class="container">
   <div class="msje_bienvenida"> 
-  <P> Bienvenido A San Fernando Store </P>
+  <h2 id="titulo" > Bienvenido a San Fernando Store </h2>
 
   </div>
 

@@ -2,7 +2,7 @@
 $my['host']	= "127.0.0.1";
 $my['user']	= "root";
 $my['pass']	= "";
-$my['dbs']	= "ecomerce";
+$my['dbs']	= "radjabangunandb";
 
 $koneksidb	= mysql_connect($my['host'], $my['user'], $my['pass']);
 if (! $koneksidb) {

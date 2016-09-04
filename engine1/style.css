@@ -460,3 +460,18 @@ color:#ffffff;
 font:130% sans-serif;
 }
 
+#formulario {
+left: 740px;
+top: -20px;
+}
+
+#hola{
+position: relative;
+top:0px;
+}
+
+#titulo {
+color:red;
+position:absolute;
+left:500px;
+}
