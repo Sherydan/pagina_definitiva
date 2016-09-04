@@ -171,20 +171,64 @@ function validarTarjetas(){
  // if (!mastercard.match(/^5[1-5]\d{2}-?\d{4}-?\d{4}-?\d{4}$/))
     //mastercard_error = "No es un número de Mastercard correcto";
   
-   $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>ERROR: No es un número de Visa correcto</div>");
+   $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>ERROR: No es un número de tarjeta Visa correcto</div>");
 
    
   
   } else {
-     $("#message").html("<div class=\"alert alert-success\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button> Numero de Visa correcto </div>");
+     $("#message").html("<div class=\"alert alert-success\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button> Numero de tarjeta Visa Valido </div>");
   }
 
 }
 var htmlobjek;
 $(document).ready(function(){
+$("#pagar").click(function(){
 
-  //apabila terjadi event onchange terhadap object <select id=propinsi>
-  $("#propinsi").change(function(){
+    var minombre = $("#inputNama").val();
+    var mitelefono = $("#inputTelepon").val();
+    var midireccion = $("#inputAlamat").val();
+    var codigopostal = $("#inputKodePos").val();
+    var miemail = $("#inputEmail").val();
+   var mivisa = $("#visa").val();
+var mipassword = $("#clavetarjeta").val();
+  var expr = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+
+  if(minombre == "") {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button> Por favor ingrese Nombre</div>");
+
+  }else if (mitelefono == "") {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor ingrese celular </div>");
+
+  }else if (midireccion == "") {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor ingrese su direccion ciudad</div>");
+
+  }else if (codigopostal == "") {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor ingrese su codigo postal</div>");
+
+  }else if (miemail == "" || !expr.test(miemail)) {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor ingrese su email valido</div>");
+  }else if (mivisa == "") {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Porfavor ingrese su tarjeta</div>");
+
+  }else if ($("#propinsi option:selected").val() == 0) {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor seleccione alguna Ciudad</div>");
+
+  }else if ($("#kota option:selected").val() == 0) {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor seleccione alguna Comuna</div>");
+
+  }else if ($("#kec option:selected").val() == 0) {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor seleccione alguna Region</div>");
+  }
+    else {
+    
+    $.ajax({
+    type: "POST",
+    url: "crear_usuario.php",
+    data: "rut="+mirut+"&nombre="+minombre+"&direccion="+midireccion+"&telefono="+mitelefono+"&email="+miemail+"&password1="+miemail+"&password1="+miclave,
+    success: function(){
+
+    $("#propinsi").change(function(){
     var propinsi = $("#propinsi").val();
     $.ajax({
         url: "ambilkota.php",
@@ -197,6 +241,7 @@ $(document).ready(function(){
         }
     });
   });
+
   $("#kota").change(function(){
     var kota = $("#kota").val();
     $.ajax({
@@ -207,6 +252,32 @@ $(document).ready(function(){
             $("#kec").html(msg);
         }
     });
+  });
+      
+  //apabila terjadi event onchange terhadap object <select id=propinsi>
+       var text = $(html).text();
+            //Pulls hidden div that includes "true" in the success response
+            var response = text.substr(text.length - 4);
+
+          if(response == ""){
+             alert("fgfdgdfg");
+            $("#message").html(html);
+            $('#pagar').hide();
+            }
+        else {
+            $("#message").html(html);
+            $('#pagar').show();
+            }
+      
+
+    },
+        beforeSend: function()
+        {
+          $("#message").html("<p class='text-center'><img src='images/ajax-loader.gif'></p>")
+        }
+      });
+    }
+    return false;
   });
 });
 
@@ -294,7 +365,7 @@ $(document).ready(function(){
                     </td>
                     <td>
                     <div class="controls">
-                        <input class="span6" name="txtNama" id="inputNama" type="text" placeholder="Beneficiario" value="<?php echo $hsl_plg['nm_pelanggan']; ?>">
+                        <input class="span6" name="txtNama" id="inputNama" type="text" placeholder="Beneficiario" value="<?php echo  $hsl_plg['nm_pelanggan'];  ?> ">
                     </div>
                     </td>
                     </tr>
@@ -346,7 +417,7 @@ $(document).ready(function(){
             </tr>
   <td><label class="control-label">Clave</label></td>
                 <td><div class="controls">
-                <input class="span5" name="clavetarj" type="password" id="inputclavetarj" placeholder="Clave" maxlength="4">
+                <input class="span5" name="clavetarjeta" type="password" id="clavetarjeta" placeholder="Clave" maxlength="4">
                 </div></td>
             </tr>
             <tr>
@@ -355,7 +426,7 @@ $(document).ready(function(){
                     <div class="controls"></td>
                     <td>
                         <select type="text" id="propinsi" name="prov" value="">
-                            <option value="BLANK">-Seleccione Ciudad-</option>
+                            <option value="0">-Seleccione Ciudad-</option>
                             <?php
                             //MENGAMBIL NAMA PROVINSI YANG DIDATABASE
                             $propinsi =mysql_query("SELECT * FROM prov ORDER BY nama_prov");
@@ -379,7 +450,7 @@ $(document).ready(function(){
                 </div></td>
                 <td><div class="controls">
                     <select type="text" id="kota" name="kota">
-                        <option value="BLANK">-Seleccione Region-</option>
+                        <option value="0">-Seleccione Region-</option>
                         <?php
                         //MENGAMBIL NAMA KOTA DI DATABASE
                         $kota=@mysql_query("SELECT * FROM kabkot ORDER BY nama_kabkot");
@@ -403,7 +474,7 @@ $(document).ready(function(){
                 <td>
                     <div class="controls">
                         <select type="text" id="kec" name="kec">
-                            <option value="BLANK">-Seleccione Distrito-</option>
+                            <option value="0">-Seleccione Distrito-</option>
                             <?php
                             //MENGAMBIL NAMA KECAMATAN DARI DATABASE
                             $kec=mysql_query("SELECT * FROM kec ORDER BY nama_kec");
