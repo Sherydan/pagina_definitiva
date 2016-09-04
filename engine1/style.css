@@ -482,3 +482,13 @@ position:absolute;
 top:115px;
 left:1110px;
 }
+
+
+#mifooter{
+height: 400px;
+position: static;
+}
+#footerespacio{
+	position: relative;
+	left: 1000px;
+}

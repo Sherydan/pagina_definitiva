@@ -2,7 +2,7 @@
 <link href="assets/css/bootstrap.css" rel="stylesheet"/>
 <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/>
 <hr class="soft">
-<div class="footer">
+<div class="mifooter"  class="footer">
       <div class="wrap">  
        <div class="section group">
         <div class="col_1_of_4 span_1_of_4">
