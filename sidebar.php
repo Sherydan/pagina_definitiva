@@ -50,7 +50,7 @@ $mySql = "SELECT * FROM kategori ORDER BY nm_kategori";
 						  <p>
 							<?php echo $categoria; ?>
 						  </p>
-			  <h4><a class="btn btn-large" href="?open=Barang-Lihat&Kode=<?php echo $KodeProduk; ?>">VER</a> <span class="pull-right">S/.<?php echo format_angka($precio); ?></span></h4>
+			  <h4><a class="btn btn-large" href="?open=Barang-Lihat&Kode=<?php echo $KodeProduk; ?>">VER</a> <span class="pull-right">$<?php echo format_angka($precio); ?></span></h4>
 						
 		  </div> 
 						
