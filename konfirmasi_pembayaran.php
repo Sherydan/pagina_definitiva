@@ -148,14 +148,14 @@ $dataJumlahTransfer = $myData['harga'] + $digitHp;
                 <tr>
                     <td><strong>Nro. Reserva</strong></td>
                     <td><strong>:</strong></td>
-                    <td><input name="txtKode" type="text" width="20" placeholder="Nro Reserva" value="<?php echo $dataNoPemesanan; ?>">
+                    <td><input name="txtKode" type="text" width="20" placeholder="Nro Reserva" readonly value="<?php echo $dataNoPemesanan; ?>">
                          <input name="txtKode" type="hidden" value="<?php echo $dataNoPemesanan; ?>" /></td>
                 
                 </tr>
                 <tr>
                     <td><strong>Nombre de Cliente</strong></td>
                     <td width="2%"><strong>:</strong></td>
-                    <td><input name="txtNama" type="text" width="30" placeholder="Nombre cliente" value="<?php echo $dataNama; ?>" >
+                    <td><input name="txtNama" type="text" width="30"  placeholder="Nombre cliente" value="<?php echo $dataNama; ?>" >
                         <input name="txtNamaLama" type="hidden" value="<?php echo $myData['nm_pelanggan']; ?>"></td>
                 </tr>
                 <tr>
@@ -169,7 +169,7 @@ $dataJumlahTransfer = $myData['harga'] + $digitHp;
                     <td><strong>Numero Operacion Bancaria</strong></td>
                     <td><strong>:</strong></td>
                     <td>
-					<input id="namaBank" name="cmbBank" type="text" width="15" placeholder="Numero Operacion" value="">
+					<input id="namaBank" name="cmbBank" type="text" width="15" placeholder="Numero Operacion" required value="">
                     <!--<div class="controls">
                     <select class="span2" id="namaBank" name="cmbBank" >
                     <option value="BLANK">-Seleccione Pago-</option>
@@ -184,7 +184,7 @@ $dataJumlahTransfer = $myData['harga'] + $digitHp;
                 <tr>
                     <td><strong>Numero de Transferencia</strong></td>
                     <td><strong>:</strong></td>
-                    <td><input name="txtJumlahTransfer" type="text" width="15" placeholder="Numero Tranferencia" value="<?php echo $dataJumlahTransfer; ?>"></td>
+                    <td><input name="txtJumlahTransfer" type="text" width="15" readonly  placeholder="Numero Tranferencia" value="<?php echo $dataJumlahTransfer; ?>"></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
@@ -207,19 +207,19 @@ $dataJumlahTransfer = $myData['harga'] + $digitHp;
         <table class="table table-bordered" border="1">
             <thead>
                 <tr>
-                    <th colspan="5" bgcolor="#FF9933"><strong>VIA BCP</strong></th>
+                    <th colspan="5" bgcolor="#FF9933"><strong>Publicidad</strong></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td colspan="3" width="25%"><img src="images/BCP.jpg"></td>
+                    <td colspan="3" width="25%"><img src="images/bancoestado.png"></td>
                     <td  width="2%">:</td>
                     <td>
                     <p>
                         <b>
-                    BANCO          : BCP<br/>
-                    Nro Cuenta     : 540-24103460-0-53<br>
-                    Beneficiario   : Julio Cesar B.<br>
+                    BANCO     : Banco estado te  invita a  Visa Internacional Banco Estado<br/>
+                    Llama a   : 540-24103460-0-53<br>
+                    Pagina web: www.bancoestado.cl<br>
                     <br><br><br>
                     </p></b>
                     </td>
