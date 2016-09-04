@@ -57,6 +57,7 @@
         <div class="copy_right">
         <p>Compañia San fernando Store  © All rights Reseverd | Design by  <a href="#">Ingenieria Informatica AIEP 2016</a> </p>
        </div>
+       
     </div>
 
 

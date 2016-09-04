@@ -299,12 +299,22 @@ hr.soften {
 
 /* Footer
 -------------------------------------------------- */
+.group{
+    zoom: 1;
+}
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
 
 .footer {
   position: relative;
     background: #FCFCFC;
     border-top: 1px solid #CECECE;
     margin: 20px auto;
+    width: 100%;
+    
 }
 .footer p {
   margin-bottom: 0;
