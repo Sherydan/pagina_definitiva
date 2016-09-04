@@ -21,6 +21,46 @@
 	-moz-box-sizing: content-box;
 	box-sizing: content-box; 
 }
+
+/* inicio de mis estilos (luis) */
+.headertop_desc {
+    padding: 20px 0;
+    border-bottom: 1px solid #EEE;
+}
+.call p span.number {
+    color: #E4292F;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+.call p span {
+    color: #303030;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.account_desc {
+    float: right;
+}
+
+.account_desc ul li {
+    font-size: 1.3em;
+    color: #9C9C9C;
+    padding: 0 10px;
+    font-family: 'arial';
+    display: inline;
+}
+.clear {
+    clear: both;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* fin mis estilos (luis) */
 * html #wowslider-container1{ width:830px }
 #wowslider-container1 .ws_images ul{
 	position:relative;

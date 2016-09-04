@@ -46,6 +46,42 @@ include_once "library/inc.library.php";
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
 <body>
+<!-- header -->
+<div class="container"> 
+<div class="header">
+   <div class="headertop_desc">
+     <div class="call">
+     <p><span>Necesita ayuda?</span> LLamar <span class="number">+569-99675432</span></span></p>
+
+<div class="container"> 
+
+<div class="account_desc">
+        <ul>
+          <li><a href="signup.php">Registrarse</a></li>
+          <li><a href="#">Entregas</a></li>
+          <li><a href="#">Mi cuenta</a></li>
+          <li><a href="logout.php">Salir</a></li>
+        </ul>
+      </div>
+</div>
+
+     </div>
+
+   </div>
+
+ </div>
+
+</div>
+
+<div class="clear"> </div>
+
+
+ 
+
+
+
+<!--fin header -->
+
   <!-- Navbar
     ================================================== -->
     <div class="container">
@@ -81,7 +117,7 @@ include_once "library/inc.library.php";
             </div>
 
 
-      
+
     </div>
 
 <!-- ======================================================================================================================== -->	
