@@ -133,7 +133,7 @@ else {
 				<hr class="soft"/>
 				<form class="form-horizontal qtyFrm">
 				  <div class="control-group">
-					<label class="control-label"><span> S/.<?php echo format_angka($lihatData['harga_jual']); ?></span></label>
+					<label class="control-label"><span> $ <?php echo format_angka($lihatData['harga_jual']); ?></span></label>
 					<div class="controls">
 					<!--<input type="number" class="span1" placeholder="Qty."/>--->
 					  <a href="?open=Barang-Beli&Kode=<?php echo $KodeBarang; ?>&stok=<?php echo $stok; ?>" class="btn btn-primary btn-large pull-right"><i class=" icon-shopping-cart"></i> Comprar</a>
@@ -329,7 +329,7 @@ while ($barangData = mysql_fetch_array($barangSql))
 						  <p>
 							<?php echo $marca; ?>
 						  </p>
-						  <h4><a class="btn btn-large" href="?open=Barang-Lihat&Kode=<?php echo $codigo; ?>">VER</a> <span class="pull-right">S/.<?php echo format_angka($precio); ?></span></h4>
+						  <h4><a class="btn btn-large" href="?open=Barang-Lihat&Kode=<?php echo $codigo; ?>">VER</a> <span class="pull-right">$<?php echo format_angka($precio); ?></span></h4>
 						</div>
 					  </div>
 					</li>

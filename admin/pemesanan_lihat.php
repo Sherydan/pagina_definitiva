@@ -107,9 +107,9 @@ if(isset($_GET['Kode'])) {
     <td width="30" align="center" bgcolor="#CCCCCC"><strong>Nro</strong></td>
     <td width="74" bgcolor="#CCCCCC"><strong>Codigo</strong></td>
     <td width="404" height="22" bgcolor="#CCCCCC"><b>Nombre de Productos</b></td>
-    <td width="111" align="right" bgcolor="#CCCCCC"><b><b>Precio (S/.)</b></b></td>
+    <td width="111" align="right" bgcolor="#CCCCCC"><b><b>Precio ($)</b></b></td>
     <td width="54" align="center" bgcolor="#CCCCCC"><b>Cantidad</b></td>
-    <td width="103" align="right" bgcolor="#CCCCCC"><b>Total (S/.)</b></td>
+    <td width="103" align="right" bgcolor="#CCCCCC"><b>Total ($)</b></td>
   </tr>
   <?php 
 	  // Deklarasi variabel
@@ -145,9 +145,9 @@ if(isset($_GET['Kode'])) {
     <td align="center"><?php echo $nomor; ?></td>
     <td><?php echo $tampilData['kd_barang']; ?></td>
     <td><?php echo $tampilData['nm_barang']; ?></td>
-    <td align="right">S/. <?php echo $tampilData['harga']; ?></td>
+    <td align="right">$ <?php echo $tampilData['harga']; ?></td>
     <td align="center"><?php echo $tampilData['jumlah']; ?></td>
-    <td align="right">S/.<?php echo format_angka($subTotal); ?></td>
+    <td align="right">$<?php echo format_angka($subTotal); ?></td>
   </tr>
   <?php
 	}
@@ -174,15 +174,15 @@ if(isset($_GET['Kode'])) {
     <td align="right">&nbsp;</td>
   </tr>
   <tr>
-    <td colspan="5" align="right" bgcolor="#F5F5F5"><strong>Total (S/.) : </strong></td>
+    <td colspan="5" align="right" bgcolor="#F5F5F5"><strong>Total ($) : </strong></td>
     <td align="right" bgcolor="#F5F5F5"><?php echo format_angka($totalHarga); ?></td>
   </tr>
   <tr>
-    <td colspan="5" align="right"><strong>Gasto de Envio  (S/.) : </strong></td>
+    <td colspan="5" align="right"><strong>Gasto de Envio  ($) : </strong></td>
     <td align="right"><?php echo format_angka($totalBiayaKirim); ?></td>
   </tr>
   <tr>
-    <td colspan="5" align="right" bgcolor="#F5F5F5"><strong>TOTAL  (S/.) : </strong></td>
+    <td colspan="5" align="right" bgcolor="#F5F5F5"><strong>TOTAL  ($) : </strong></td>
     <td align="right" bgcolor="#F5F5F5"><?php echo format_angka($totalBayar); ?></td>
   </tr>
   <tr>

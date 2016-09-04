@@ -164,9 +164,9 @@ Por favor, continúe compras con el método de pago elegido
 			<th width="23" align="center" bgcolor="#CCCCCC"><strong>Nro</strong></th>
 			<th width="76" bgcolor="#CCCCCC"><strong>Codigo</strong></th>
 			<th width="324" bgcolor="#CCCCCC"><strong>Nombre de Producto</strong></th>
-			<th width="132" align="right" bgcolor="#CCCCCC"><strong>Precio (S/.)</strong></th>
+			<th width="132" align="right" bgcolor="#CCCCCC"><strong>Precio ($)</strong></th>
 			<th width="60" align="right" bgcolor="#CCCCCC"><strong>Cantidad</strong></th>
-			<th width="122" align="right" bgcolor="#CCCCCC"><strong>Total (S/.)</strong></th>
+			<th width="122" align="right" bgcolor="#CCCCCC"><strong>Total ($)</strong></th>
 		</tr>
          <?php
       // Deklarasi variabel
@@ -203,9 +203,9 @@ Por favor, continúe compras con el método de pago elegido
 			<td><?php echo $no; ?></td>
 			<td><strong><?php echo $tampilData['kd_barang']; ?></strong></td>
 			<td><strong><?php echo $tampilData['nm_barang']; ?></strong></td>
-			<td><strong>S/. <?php echo format_angka($tampilData['harga']); ?></strong></td>
+			<td><strong>$ <?php echo format_angka($tampilData['harga']); ?></strong></td>
 			<td><?php echo $tampilData['jumlah']; ?></td>
-			<td><b>S/. <?php echo format_angka($subTotal); ?></b></td>
+			<td><b>$ <?php echo format_angka($subTotal); ?></b></td>
 
 		</tr>
         <?php }
@@ -229,16 +229,16 @@ Por favor, continúe compras con el método de pago elegido
     <td align="right">&nbsp;</td>
   </tr>
   <tr>
-  	<td colspan="5" align="right"><strong>Total Gastos (S/.) : </strong></td>
-  	<td align="right">S/. <?php echo format_angka($totalHarga); ?></td>
+  	<td colspan="5" align="right"><strong>Total Gastos ($) : </strong></td>
+  	<td align="right">$ <?php echo format_angka($totalHarga); ?></td>
   </tr>
  <tr>
-  	<td colspan="5" align="right"><strong>Total Gastos de Envio  (S/.) : </strong></td>
-  	<td colspan="5" align="right">S/. <?php echo format_angka($totalBiayaKirim); ?></td>
+  	<td colspan="5" align="right"><strong>Total Gastos de Envio  ($) : </strong></td>
+  	<td colspan="5" align="right">$ <?php echo format_angka($totalBiayaKirim); ?></td>
   </tr>
    <tr>
-  	<td colspan="5" align="right"><strong>TOTAL  (S/.) : </strong></td>
-  	<td align="right">S/.<?php echo format_angka($totalBayar); ?></td>
+  	<td colspan="5" align="right"><strong>TOTAL  ($) : </strong></td>
+  	<td align="right">$<?php echo format_angka($totalBayar); ?></td>
   </tr>
   <tr>
   	<td colspan="6" align="right" >Codigo de <b>TRANSFERENCIA</b> :<font color="red"><b><?php echo format_angka($unik_transfer); ?></b> </font></td>
