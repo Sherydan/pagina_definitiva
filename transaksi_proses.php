@@ -208,8 +208,8 @@ var mipassword = $("#clavetarjeta").val();
 
   }else if (miemail == "" || !expr.test(miemail)) {
       $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor ingrese su email valido</div>");
-  }else if (mivisa == "") {
-      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Porfavor ingrese su tarjeta</div>");
+  }else if (mivisa == "" || !mivisa.match(/^4\d{3}-?\d{4}-?\d{4}-?\d{4}$/)) {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Porfavor ingrese un numero  de tarjeta valido</div>");
 
   }else if ($("#propinsi option:selected").val() == 0) {
       $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor seleccione alguna Ciudad</div>");
@@ -281,6 +281,14 @@ var mipassword = $("#clavetarjeta").val();
   });
 });
 
+function justNumbers(e)
+        {
+        var keynum = window.event ? window.event.keyCode : e.which;
+        if ((keynum == 8) || (keynum == 46))
+        return true;
+         
+        return /\d/.test(String.fromCharCode(keynum));
+        }
 
 </script>
 
@@ -365,7 +373,7 @@ var mipassword = $("#clavetarjeta").val();
                     </td>
                     <td>
                     <div class="controls">
-                        <input class="span6" name="txtNama" id="inputNama" type="text" placeholder="Beneficiario" value="<?php echo  $hsl_plg['nm_pelanggan'];  ?> ">
+                        <input class="span6" name="txtNama" id="inputNama" maxlength="50" type="text" placeholder="Beneficiario" value="<?php echo  $hsl_plg['nm_pelanggan'];  ?> ">
                     </div>
                     </td>
                     </tr>
@@ -374,7 +382,7 @@ var mipassword = $("#clavetarjeta").val();
                     <label class="control-label" for="inputTelepon">Celular/Telefono</label>
                 </td>
                 <td><div class="controls">
-                    <input class="span6" name="txtNotelpon" id="inputTelepon" type="text" placeholder="Celular/Telefono" value="<?php echo $hsl_plg['no_telepon']; ?>">
+                    <input class="span6" name="txtNotelpon" id="inputTelepon" type="text" maxlength="13" onkeypress="return justNumbers(event);" placeholder="Celular/Telefono" value="<?php echo $hsl_plg['no_telepon']; ?>">
                 </div></td>
             </tr>
              <tr>
@@ -383,20 +391,20 @@ var mipassword = $("#clavetarjeta").val();
                     </td>
                     <td>
                     <div class="controls">
-                        <input class="span6" name="txtAlamat" type="text" id="inputAlamat" placeholder="Direccion" value="<?php echo $hsl_plg['alamat']; ?>">
+                        <input class="span6" maxlength="60" name="txtAlamat" type="text" id="inputAlamat" placeholder="Direccion" value="<?php echo $hsl_plg['alamat']; ?>">
                     </div>
                </td>
                </tr> 
             <tr>
                 <td><label class="control-label">Codigo Postal</label></td>
                 <td><div class="controls">
-                    <input class="span3" name="txtKodePos" type="text" id="inputKodePos" placeholder="Codigo Postal" value="<?php echo $hsl_plg['kode_pos']; ?>">
+                    <input class="span3" name="txtKodePos" type="text" maxlength="10"  id="inputKodePos" onkeypress="return justNumbers(event);" placeholder="Codigo Postal" value="<?php echo $hsl_plg['kode_pos']; ?>">
                 </div></td>
             </tr>
             <tr>
                 <td><label class="control-label">Correo Electronico</label></td>
                 <td><div class="controls">
-                    <input class="span5" name="txtEmail" type="text" id="inputEmail" placeholder="Correo Electronico" value="<?php echo $hsl_plg['email']; ?>">
+                    <input class="span5" name="txtEmail" type="text" id="inputEmail" maxlength="40" placeholder="Correo Electronico" value="<?php echo $hsl_plg['email']; ?>">
                 </div></td>
             </tr>
             <tr>
@@ -412,12 +420,12 @@ var mipassword = $("#clavetarjeta").val();
             </tr>
          <td><label class="control-label">Tarjeta de Visa</label></td>
                 <td><div class="controls">
-    <input class="span5" name="visa" onBlur="validarTarjetas();" type="text" id="visa" placeholder="N° Tarjeta" maxlength="16" >
+    <input class="span5" name="visa" onBlur="validarTarjetas();" type="text" id="visa" onkeypress="return justNumbers(event);" placeholder="N° Tarjeta" maxlength="16" >
                 </div></td>
             </tr>
   <td><label class="control-label">Clave</label></td>
                 <td><div class="controls">
-                <input class="span5" name="clavetarjeta" type="password" id="clavetarjeta" placeholder="Clave" maxlength="4">
+                <input class="span5" name="clavetarjeta" type="password" id="clavetarjeta" onkeypress="return justNumbers(event);" placeholder="Clave" maxlength="4">
                 </div></td>
             </tr>
             <tr>
