@@ -101,7 +101,7 @@ if($nomor%2==1) { $warna=""; } else {$warna="#F5F5F5";}
     <td width="24%" align="center">
 		<a href="?open=Barang-Lihat&Kode=<?php echo $KodeBarang; ?>">
 		<img src="assets/products/<?php echo $fileGambar; ?>" width="100" border="0"> </a> <br>
-		<div class='harga'>S/. <?php echo format_angka($barang2Data['harga_jual']); ?> </div> <br>
+		<div class='harga'>$ <?php echo format_angka($barang2Data['harga_jual']); ?> </div> <br>
 		<a href="?open=Barang-Beli&Kode=<?php echo $KodeBarang; ?>" class="btn btn-small"><i class=" icon-shopping-cart"></i> Agregar al Carrito</a>
     <td width="76%" valign="top">
 		<a href="?open=Barang-Lihat&Kode=<?php echo $KodeBarang; ?>">

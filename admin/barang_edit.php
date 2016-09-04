@@ -157,12 +157,12 @@ $myData 	= mysql_fetch_array($myQry);
       <td><input name="txtNama" value="<?php echo $dataNama; ?>" size="80" maxlength="200" /></td>
     </tr>
     <tr>
-      <td><strong>Precio Compra  (S/.) </strong></td>
+      <td><strong>Precio Compra  ($) </strong></td>
       <td><strong>:</strong></td>
       <td><input name="txtHrgModal" type="text" value="<?php echo $dataHrgModal; ?>" size="20" maxlength="12" /></td>
     </tr>
     <tr>
-      <td><strong>Precio Venta (S/.) </strong></td>
+      <td><strong>Precio Venta ($) </strong></td>
       <td><strong>:</strong></td>
       <td><input name="txtHrgJual" type="text" value="<?php echo $dataHrgJual; ?>" size="20" maxlength="12" /></td>
     </tr>
