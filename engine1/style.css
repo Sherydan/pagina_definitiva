@@ -23,6 +23,13 @@
 }
 
 /* inicio de mis estilos (luis) */
+
+.footer {
+    position: relative;
+    background: #FCFCFC;
+    border-top: 1px solid #CECECE;
+    margin: 20px auto;
+}
 .msje_bienvenida p{
 text-align: right;
 position: relative;
