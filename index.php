@@ -62,8 +62,7 @@ include_once "library/inc.library.php";
 <div class="account_desc">
         <ul>
           <li><a href="?open=DataBaru">Registrarse</a></li>
-          <li><a href="#">Entregas</a></li>
-          <li><a href="#">Mi cuenta</a></li>
+          <li><a href="?open=CaraPengembalian">Entregas</a></li>
           <li><a href="login_out.php">Salir</a></li>
         </ul>
       </div>

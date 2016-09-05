@@ -372,10 +372,10 @@ Para simplificar el proceso de pedido, debe registrarse en el siguiente formular
 			</div>
 		</div>
 		<div class="control-group">
-			<label class="control-label" for="state" >Ciudad / Provincia<sup>*</sup></label>
+			<label class="control-label" for="state" >Comuna<sup>*</sup></label>
 			<div class="controls">
 			 <select type="text" id="kota" name="kota">
-                        <option value="0">-Seleccione Region-</option>
+                        <option value="0">-Seleccione Comuna-</option>
                         <?php
                         //MENGAMBIL NAMA KOTA DI DATABASE
                         $kota=@mysql_query("SELECT * FROM kabkot ORDER BY nama_kabkot");
@@ -393,7 +393,7 @@ Para simplificar el proceso de pedido, debe registrarse en el siguiente formular
 			</div>
 		</div>
 		<div class="control-group">
-			<label class="control-label" for="country">Pais<sup>*</sup></label>
+			<label class="control-label" for="country">Pais de Origen<sup>*</sup></label>
 			<div class="controls">
 			  <select type="text" id="kec" name="kec" >
 				<option value="0">-Seleccionar Pais-</option>

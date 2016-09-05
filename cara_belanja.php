@@ -48,7 +48,7 @@
         <h3><font color="red">San Fernando Store</font> <font color="green">S.A</font></h3>
 	
 		<hr class="soft">
-		<h3><font color="green">Como hacer Compras</font></h3><	
+		<h3><font color="green">¿Como hacer Compras?</font></h3>	
 	
         <font face:'comic sans';>
 
