@@ -186,7 +186,7 @@ $("#pagar").click(function(){
     var miemail = $("#inputEmail").val();
    var mivisa = $("#visa").val();
 var mipassword = $("#clavetarjeta").val();
-  var expr = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  var expr = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
 
   if(minombre == "") {

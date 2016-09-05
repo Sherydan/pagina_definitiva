@@ -8,14 +8,14 @@
 			<a href="?open=CaraMember"><font  color="Blue">Ser Miembro?</font></a>
 			<a href="?open=KeuntunganMember"><font color= "blue">Ventajas Miembro</font></a> 
 			<a href="?open=CaraBelanja"><font color="blue">Hacer Compras?</font></a> 
-			<a href="?open=CaraPengembalian"><font color="blue">Devoluciones</font></a>  
+		
 			<a href="#"><font color="blue">Carrera</font></a>
 		 </div>
 		<div class="span3">
 			<h5>Contacto</h5>
             <a href="?open=KontakKami"><font color="blue">Contáctenos</font></a>    
 			<a href="?open=TermQuestion"><font color="blue">Terminos y Condiciones</font></a> 
-			<a href="#"><font color="blue">F.A.Q.</font></a>
+			<a href="?open=CaraPengembalian"><font color="blue">F.A.Q.</font></a>
 		 </div>
 		<div class="span3">
 			<h5>Explorar</h5>
