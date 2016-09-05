@@ -136,7 +136,7 @@ include_once "library/inc.library.php";
   <!--INICIO MSJE BIENVENIDA -->
   <div class="container">
   <div class="msje_bienvenida"> 
-  <h2 id="titulo" > Bienvenido a San Fernando Store </h2>
+<img id="milogo" src="images/sanfer.png">
 
   </div>
 
