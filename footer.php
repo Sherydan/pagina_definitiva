@@ -19,7 +19,7 @@
 		 </div>
 		<div class="span3">
 			<h5>Explorar</h5>
-			<a href="?open=SyaratKetentuan"><font color="blue">Términos y Condiciones</font></a> 
+			<a href="?open=TermQuestion"><font color="blue">Términos y Condiciones</font></a> 
 			<a href="#"><font color="blue">Politica de Privacidad</font></a>  
 			
 		 </div>

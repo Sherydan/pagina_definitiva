@@ -42,25 +42,25 @@
 <div class="span9" id="mainCol">
     <ul class="breadcrumb">
       <li><a href="?open=''">Inicio</a><span class="divider">/</span></li>
-      <li class="active">Terminos & Preguntas</li>
+      <li class="active">Terminos & Condiciones</li>
       <li>empresa</li>
     </ul>
-    <h3>Terminos y Preguntas</h3>
+    <h3>Terminos y Condiciones</h3>
     <hr class="soft">
-      <h3><font color="red">Platea21</font> <font color="green">SIT</font></h3><br/>
+      <h3><font color="red">San Fernando Store</font> <font color="green">S.A</font></h3><br/>
   
         <font face:'comic sans';>
 
 <b>Política de Privacidad</b><br>
 
-Como los servicios de comercio electrónico cerca de los clientes, no cabe duda de mantener la privacidad de nuestros clientes muy en serio y sólo recoger, registrar y utilizar la información de la mejor manera posible. Protección de sus datos es una cuestión de mantener la confianza y la privacidad que le daría a nosotros y nos mantienen en serio. Sólo recopilaremos información sobre usted que sea relevante para las necesidades de la transacción.
+Como un servicios de comercio electrónico cercano a los clientes, no cabe duda de que mantener la privacidad de nuestros clientes es un tema serio, por el cual intentamos recoger, registrar y utilizar la información de la mejor manera posible. La protección de sus datos es un metodo de mantener la confianza y la privacidad que le brindaremos. Sólo recopilaremos información sobre usted que sea relevante para las necesidades de la transacción.
 
-Si tiene cualquier comentario, sugerencias, quejas u otras preguntas, puede contactar con nosotros a través del correo electrónico a julioscsar@gmail.com<br>
+Si tiene cualquier comentario, sugerencias, quejas u otras preguntas, puede contactar con nosotros a través del correo electrónico a sanfernandostore@gmail.com<br>
 <br>
 <strong>Términos y Condiciones</strong><br>
 En esta página se puede ver cómo las condiciones de uso están destinadas a usted como visitante o nuestros miembros. Si está de acuerdo con los términos establecidos puede seguir utilizando nuestro sitio y aferrarse a él como aparece aquí. Tampoco se puede seguir utilizando este sitio si usted no se siente de acuerdo con una o más condiciones.<br>
 <br>
-<strong>Informacion Platea21</strong><br>
+<strong>Informacion San Fernando Store</strong><br>
 <br><br>
 
 <strong>Productos y Servicios</strong><br>

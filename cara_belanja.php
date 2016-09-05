@@ -2,7 +2,7 @@
 <head>
 <title></title>
     <meta charset="utf-8">
-    <title>Sobre Nosotros - Platea21</title>
+    <title>Sobre Nosotros - San Fernando Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -47,23 +47,23 @@
 		</ul>
 		<h3>Como hacer Compras</h3>
 		<hr class="soft">
-			<h3><font color="red">Platea21</font> <font color="green">SIT</font></h3><br/>
+			<h3><font color="red">San Fernando Store</font> <font color="green">S.A</font></h3><br/>
 	
         <font face:'comic sans';>
 <strong>Como hacer Compras</strong><br>
 <p>
-Comprar con nosotros es menos fácil, inmediatamente puede encontrar la categoría de elemento que desea o busca los productos que desee.
+Comprar con nosotros es muy fácil, inmediatamente puede encontrar la categoría de elemento que desea o busca los productos que desee.
 A continuación, puede seguir la siguiente guía :
 <br><br>
 <ol>
     <li> Para conocer las especificaciones detalladas de los productos que desea, puede hacer clic en la opción "Ver" de antemano </li>
-    <li> Si de acuerdo con lo que necesita, puede simplemente haga clic en Agregar a la cesta. Puede seguir sus compras de otros productos "Continuar comprando" de la misma manera, o pasar directamente al proceso de pago por clic "Realizar pago" .. </li>
+    <li> Si esta de acuerdo con lo que necesita, puede simplemente haga clic en Agregar a la cesta. Puede seguir sus compras de otros productos "Continuar comprando" de la misma manera, o pasar directamente al proceso de pago por clic "Realizar pago" .. </li>
     <li> Vuelve dirección de destino del envío que usted ha pedido, si es diferente a la dirección de registro, entonces usted puede cambiarlo. </li>
     <li> Seleccione su forma de pago deseada:. la tarjeta de crédito o transferencia en efectivo </li>
-    <li> Usted también puede elegir el tipo de entrega apakag regular, la economía o la ONS. </li>
+    <li> Usted también puede elegir el tipo de entrega, la ciudad, etc. </li>
     <li> Una vez que el total que se transfiere, se puede realizar directamente transacciones de acuerdo con el método de pago que elija. </li>
     <li> Cuando haya terminado, no olvide hacer una confirmación del pago en el menú Historial De Pedidos y obtendrá las últimas novedades sobre el progreso de su orden allí. </li>
-    <li> Las mercancías llegarán dentro de la hora prevista se ha dado. </li>
+    <li> Las mercancías llegarán dentro de la hora prevista que se le ha indicado. </li>
 </ol></p>		
 </div>
 </div>

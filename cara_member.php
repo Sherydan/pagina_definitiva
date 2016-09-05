@@ -43,22 +43,22 @@
 		<ul class="breadcrumb">
 			<li><a href="?open=''">Inicio</a><span class="divider">/</span></li>
 			<li class="active">¿Cómo convertirse en un miembro?</li>
-			<li>Coporativo</li>
+			<li>Corporativo</li>
 		</ul>
 		<h3>Convertirse en un miembro</h3>
 		<hr class="soft">
-			<h3><font color="red">Platea21</font> <font color="green">SIT</font></h3><br/>
+			<h3><font color="red">San Fernando Store</font> </h3><br/>
 	
         <font face:'comic sans';>
 <strong>Cómo convertirse en un miembro</strong><br>
 <p>
-Para comenzar el proceso de compras con nosotros, usted debe ser un miembro de Radja Edificio en línea mediante la realización de pasos simples y prácticos, como se muestra a continuación: :<br><br>
+Para comenzar el proceso de compras con nosotros, usted debe ser un miembro de San Fernando Store mediante la realización de pasos simples y prácticos, como se muestra a continuación: :<br><br>
 <ol>
     <li>Haga clic en Nuevo miembro en el lado izquierdo de la página web</li>
-    <li>Rellene los datos como sea posible para que podamos procesar el pedido. Debe rellenar todos los campos correctamente, sobre todo para hacer frente.</li>
+    <li>Rellene los datos como sea posible para que podamos procesar el pedido. Debe rellenar todos los campos correctamente, sobre todo si desea realizar compras.</li>
     <li>Rellene el nombre de usuario que desee y también le enviaremos un correo electrónico para confirmar la cuenta más tarde</li>
     <li>Después de hacer clic en "Registrarse", por favor revise su buzón de correo electrónico y haga clic en el enlace que hay para la activación de su cuenta.</li>
-    <li>Enhorabuena que las han arreglado para convertirse en un nuevo miembro de Radja Edificio en línea y pueden empezar a comprar </li>
+    <li>Enhorabuena usted se ha convertido en un nuevo miembro de San Fernando Store y pueden empezar a comprar </li>
 </ol></p>		
 </div>
 </div>
