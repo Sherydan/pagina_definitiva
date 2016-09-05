@@ -59,7 +59,8 @@ Para comenzar el proceso de compras con nosotros, usted debe ser un miembro de S
     <li>Rellene el nombre de usuario que desee y también le enviaremos un correo electrónico para confirmar la cuenta más tarde</li>
     <li>Después de hacer clic en "Registrarse", por favor revise su buzón de correo electrónico y haga clic en el enlace que hay para la activación de su cuenta.</li>
     <li>Enhorabuena usted se ha convertido en un nuevo miembro de San Fernando Store y pueden empezar a comprar </li>
-</ol></p>		
+</ol></p>	
+ <img src="images/miembros.jpg">	
 </div>
 </div>
 </body>

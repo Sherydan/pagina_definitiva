@@ -45,17 +45,19 @@
 			<li class="active">Convertirse en Cliente</li>
 			<li>Corporativo</li>
 		</ul>
-		<h3>Como hacer Compras</h3>
+        <h3><font color="red">San Fernando Store</font> <font color="green">S.A</font></h3>
+	
 		<hr class="soft">
-			<h3><font color="red">San Fernando Store</font> <font color="green">S.A</font></h3><br/>
+		<h3><font color="green">Como hacer Compras</font></h3><	
 	
         <font face:'comic sans';>
-<strong>Como hacer Compras</strong><br>
-<p>
-Comprar con nosotros es muy fácil, inmediatamente puede encontrar la categoría de elemento que desea o busca los productos que desee.
-A continuación, puede seguir la siguiente guía :
-<br><br>
+
+
+
+
 <ol>
+<li>Comprar con nosotros es muy fácil, inmediatamente puede encontrar la categoría de elemento que desea o busca los productos que desee.
+A continuación, puede seguir la siguiente guía :</li>
     <li> Para conocer las especificaciones detalladas de los productos que desea, puede hacer clic en la opción "Ver" de antemano </li>
     <li> Si esta de acuerdo con lo que necesita, puede simplemente haga clic en Agregar a la cesta. Puede seguir sus compras de otros productos "Continuar comprando" de la misma manera, o pasar directamente al proceso de pago por clic "Realizar pago" .. </li>
     <li> Vuelve dirección de destino del envío que usted ha pedido, si es diferente a la dirección de registro, entonces usted puede cambiarlo. </li>
@@ -64,7 +66,8 @@ A continuación, puede seguir la siguiente guía :
     <li> Una vez que el total que se transfiere, se puede realizar directamente transacciones de acuerdo con el método de pago que elija. </li>
     <li> Cuando haya terminado, no olvide hacer una confirmación del pago en el menú Historial De Pedidos y obtendrá las últimas novedades sobre el progreso de su orden allí. </li>
     <li> Las mercancías llegarán dentro de la hora prevista que se le ha indicado. </li>
-</ol></p>		
+</ol></p>	
+<img src="images/compras.jpg" alt="">	
 </div>
 </div>
 </body>

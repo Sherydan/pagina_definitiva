@@ -11,6 +11,7 @@
           p{
             text-indent:50px;
           }
+   
       </style>
     <!-- Le styles  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet"/>
@@ -60,60 +61,9 @@ Si tiene cualquier comentario, sugerencias, quejas u otras preguntas, puede cont
 <strong>Términos y Condiciones</strong><br>
 En esta página se puede ver cómo las condiciones de uso están destinadas a usted como visitante o nuestros miembros. Si está de acuerdo con los términos establecidos puede seguir utilizando nuestro sitio y aferrarse a él como aparece aquí. Tampoco se puede seguir utilizando este sitio si usted no se siente de acuerdo con una o más condiciones.<br>
 <br>
-<strong>Informacion San Fernando Store</strong><br>
-<br><br>
-
-<strong>Productos y Servicios</strong><br>
-<ul>
-  <li></li>
-  </ul>
-<br>
-
-<strong></strong><br><br>
-<br>
-<ol type="a">
-  <li></li>
-  <li>
-      <ul style="list-style-type:square">
-        <li></li>
-        <li></li>
-      </ul>
-  </li>
-</ol><br>
-<b></b><br>
-
-<strong>Cancelaciones, Devoluciones e intercambios Productos :</strong>
-<ol type="a">
-  
-</ol>
-<br>
-
-<strong>Visión general y Condiciones Producto</strong> 
-<ol type="a">
-  <li></li>
-  <li>
-      <ul type="list-style-type:circle">
-        <li></li>
-      </ul></li>
-  <li></li>
-  <li></li>
-</ol>
-<br>
-
-<strong></strong>
-<ol type="a">
-  <li></li>
-  <li></li>
-</ol>
-
-<strong>Privacidad y Seguridad :</strong>
-<ol type="a">
-  <li></li>
-  <li></li>
-  <li></li>
-</ol>
- 
-
+<div>
+<img src="images/termino.jpg" alt="">
+</div>
 
 </p>
 </div>
