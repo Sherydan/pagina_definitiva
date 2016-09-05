@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Online Shop</title>
+    <title>San Fernando Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -39,7 +39,7 @@
     <h3>AVISO</h3>
   </div>
   
-		<center>Registro de éxito. Por favor, compruebe el correo electrónico de confirmación de nosotros en su bandeja de entrada para la activación de su cuenta en Platea21 Online.</center>
+		<center>Registro de éxito. Por favor, compruebe el correo electrónico de confirmación de nosotros en su bandeja de entrada para la activación de su cuenta en San Fernando Store.</center>
 	
 	
 	
