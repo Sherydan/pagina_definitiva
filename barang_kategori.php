@@ -123,7 +123,7 @@ while ($barang2Data = mysql_fetch_array($barang2Sql)) {
 			</div>
 			<div class="span3 alignR">
 			<form class="form-horizontal qtyFrm">
-			<h3>S/.<?php echo format_angka($barang2Data['harga_jual']); ?></h3>
+			<h3>$<?php echo format_angka($barang2Data['harga_jual']); ?></h3>
 			
 			  <a href="?open=Barang-Beli&Kode=<?php echo $KodeBarang; ?>" class="btn btn-large"><i class=" icon-shopping-cart"></i>Agregar al Carrito</a>
 			  <a href="?open=Barang-Lihat&Kode=<?php echo $KodeBarang; ?>" class="btn btn-large">VER</a>
