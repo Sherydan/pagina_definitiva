@@ -179,10 +179,11 @@ $(document).ready(function(){
 $("#registrar").click(function(){
 
 
-    var miemail = $("#inputEmail").val();
 var midireccion=$("#txtAlamat").val();
-  var expr = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  var expr = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
+    var miemail = $("#txtEmail").val();
+   $("#message").html("");
 
 if ($("#jeniskelamin option:selected").val() == 0) {
       $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor seleccione su genero</div>");
@@ -197,10 +198,12 @@ if ($("#jeniskelamin option:selected").val() == 0) {
       $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor seleccione alguna Comuna</div>");
 
   }else if ($("#kec option:selected").val() == 0) {
-      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor seleccione alguna Pais</div>");
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor seleccione algun Pais</div>");
 
-  }else if(miemail == "" || !expr.test(miemail)) {
+  }else if (miemail == "" || !expr.test(miemail)) {
       $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button> Por favor ingrese email valido</div>");
+
+
 
   }
     else {
@@ -253,7 +256,7 @@ if ($("#jeniskelamin option:selected").val() == 0) {
  return false;
 
   }
-  
+
 
 });
 });
@@ -433,13 +436,13 @@ Para simplificar el proceso de pedido, debe registrarse en el siguiente formular
         <div class="control-group">
             <label class="control-label" for="inputEmail">Email <sup>*</sup></label>
             <div class="controls">
-                <input type="text" name="txtEmail" id="inputEmail" maxlength="40" placeholder="Correo Electronico" required>
+                <input type="text" name="txtEmail" id="txtEmail" maxlength="70" placeholder="Correo Electronico" >
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="inputPassword">Contraseña <sup>*</sup></label>
             <div class="controls">
-                <input type="password" name="txtPassword" maxlength="10" id="inputPassword" placeholder="Contraseña" required>
+                <input type="password" name="txtPassword" id="claves" maxlength="10" id="inputPassword" placeholder="Contraseña" required>
             </div>
         </div>
        <div >
