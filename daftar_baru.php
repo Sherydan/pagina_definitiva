@@ -17,7 +17,7 @@ function randomcode($len="10"){
 $code= NULL;
 for($i=0; $i<$len; $i++){
 		$char=chr(rand(48,122));
-		while (!ereg("[a-zA-Z0-9]", $char)) {
+		while (!preg_match("/[a-zA-Z0-9]/", $char)) {
 			if($char == $lchar) {continue;}
 			$char =chr(rand(48,90));
 		}
@@ -50,7 +50,7 @@ $pesanError = array();
     $txtAlamat 				= $_POST['txtAlamat'];	
     $txtMobile				= $_POST['txtMobile'];
     $kec					= $_POST['kec'];
-    $propinsi   			= $_POST['propinsi'];
+    $propinsi  = isset($_POST['propinsi'])? $_POST['propinsi'] : '';
     $kota	      			=$_POST	['kota'];
     $txtPhone				=$_POST['txtPhone'];
     $txtPassword 			= $_POST['txtPassword'];
@@ -93,7 +93,7 @@ $pesanError = array();
 	else {
 		$subjek ="Codigo de Activacion";
 $kodeAktivasi= randomcode();
-$Kepada = $_POST[txtUsername];
+$Kepada = $_POST['txtUsername'];
 $link=
 "http://radjabangunan.net84.net/?open=Aktivasi&code=$kodeAktivasi";
 $pesan="Hola $_POST[txtUsername],
@@ -105,7 +105,7 @@ $link
 
 Saludos Cordiales, 
 
-Platea21
+San fernando Store
 
 ";
 $from="from : gorchor@gmail.com";
@@ -171,9 +171,42 @@ $dataProvinsi		=isset($_POST['cmbProvinsi']) ? $_POST['cmbProvinsi'] :'';
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 	
 	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 		<script type="text/javascript">
 var htmlobjek;
 $(document).ready(function(){
+
+$("#registrar").click(function(){
+
+
+    var miemail = $("#inputEmail").val();
+var midireccion=$("#txtAlamat").val();
+  var expr = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+
+if ($("#jeniskelamin option:selected").val() == 0) {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor seleccione su genero</div>");
+
+  }else if (midireccion == "") {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor seleccione algun direccion(domicilio)</div>");
+
+  }else if ($("#propinsi option:selected").val() == 0) {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor seleccione alguna Ciudad</div>");
+
+  }else if ($("#kota option:selected").val() == 0) {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor seleccione alguna Comuna</div>");
+
+  }else if ($("#kec option:selected").val() == 0) {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor seleccione alguna Pais</div>");
+
+  }else if(miemail == "" || !expr.test(miemail)) {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button> Por favor ingrese email valido</div>");
+
+  }
+    else {
+    
+    
+      
   //apabila terjadi event onchange terhadap object <select id=propinsi>
   $("#propinsi").change(function(){
     var propinsi = $("#propinsi").val();
@@ -182,12 +215,16 @@ $(document).ready(function(){
         data: "propinsi="+propinsi,
         cache: false,
         success: function(msg){
+
             //jika data sukses diambil dari server kita tampilkan
             //di <select id=kota>
             $("#kota").html(msg);
+
         }
+
     });
   });
+
   $("#kota").change(function(){
     var kota = $("#kota").val();
     $.ajax({
@@ -199,7 +236,55 @@ $(document).ready(function(){
         }
     });
   });
+//apabila terjadi event onchange terhadap object <select id=propinsi>
+        var text = $(html).text();
+            var response = text.substr(text.length - 4);
+
+          if(response == ""){
+        
+            $("#message").html(html);
+            $('#registrar').hide();
+            }
+        else {
+            $("#message").html(html);
+            $('#registrar').show();
+            } 
+
+ return false;
+
+  }
+  
+
 });
+});
+
+function justNumbers(e)
+        {
+        var keynum = window.event ? window.event.keyCode : e.which;
+        if ((keynum == 8) || (keynum == 46))
+        return true;
+         
+        return /\d/.test(String.fromCharCode(keynum));
+        }
+
+ function soloLetras(e){
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+       especiales = "8-37-39-46";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
 
 </script>
 
@@ -230,7 +315,7 @@ Para simplificar el proceso de pedido, debe registrarse en el siguiente formular
 			<label class="control-label" for="inputFname">Nombre <sup>*</sup></label>
 			<div class="controls">
 				<div style="color:red"><?php echo $error_tuh; ?></div>
-			  <input type="text" id="txtNamaLengkap"  name="txtNamaLengkap"  value="<?php echo $dataNama; ?>"   placeholder="Nombre" class="form-control" required >
+			  <input type="text" id="txtNamaLengkap" maxlength="40"  name="txtNamaLengkap" onkeypress="return soloLetras(event)" value="<?php echo $dataNama; ?>"   placeholder="Nombre" class="form-control" required >
 			
 		 </div>
 		 </div>
@@ -238,7 +323,7 @@ Para simplificar el proceso de pedido, debe registrarse en el siguiente formular
 		 <div class="control-group">
             <label class="control-label" for="inputFnameLast">Apellidos<sup>*</sup></label>
              <div class="controls">
-                 <input type="text" id="txtlastName" name="txtlastName" value="<?php echo $dataLast; ?>" placeholder="Apellidos" required>
+                 <input type="text" id="txtlastName" maxlength="40" name="txtlastName" onkeypress="return soloLetras(event)" value="<?php echo $dataLast; ?>" placeholder="Apellidos" required>
              </div>
         </div>
             
@@ -247,7 +332,7 @@ Para simplificar el proceso de pedido, debe registrarse en el siguiente formular
             <label class="control-label" for="dob">Género<sup>*</sup></label>
             <div class="controls">
                 <select class="span2" id="jeniskelamin" name="cmbGender" required>
-                    <option value="KOSONG">-Género-</option>
+                    <option value="0">-Género-</option>
                   <?php
                   $pilihan  = array("Masculino","Femenino");
                   	foreach ($pilihan as $nilai) {
@@ -265,45 +350,55 @@ Para simplificar el proceso de pedido, debe registrarse en el siguiente formular
 		<div class="control-group">
 			<label class="control-label" for="adress">Dirección<sup>*</sup></label>
 			<div class="controls">
-			  <input type="text" name="txtAlamat"   id="txtAlamat"  value="<?php echo $dataAlamat; ?>" placeholder="Dirección"/ required> <span>Domicilio,Calle,barrio,Dirección de la empresa, etc</span>
+			  <input type="text" name="txtAlamat" maxlength="50"   id="txtAlamat"  value="<?php echo $dataAlamat; ?>" placeholder="Dirección" required> <span>Domicilio,Calle,barrio,Dirección de la empresa, etc</span>
 			</div>
 		</div>
 		<div class="control-group">
-			<label class="control-label" for="city" >Departamento<sup>*</sup></label>
+			<label class="control-label" for="city" >Ciudad<sup>*</sup></label>
 			<div class="controls">
-				<select type="text" id="propinsi" name="propinsi" required>
-					<option value="BLANK">-Seleccionar Departamento-</option>
-					<?php
+				<select type="text" id="propinsi" name="prov" value="">
+                            <option value="0">-Seleccione Ciudad-</option>
+                        <?php
 						//MENGAMBIL NAMA PROVINSI YANG DI DATABASE
 						$propinsi =mysql_query("SELECT * FROM prov ORDER BY nama_prov");
 						while ($dataProvinsi=mysql_fetch_array($propinsi)) {
 							echo "<option value=\"$dataProvinsi[id_prov]\">$dataProvinsi[nama_prov]</option>\n";
 						}
 					?>
-				</select>
+                        </select>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="state" >Ciudad / Provincia<sup>*</sup></label>
 			<div class="controls">
-			  <select type="text" id="kota"  name="kota">
-				<option value="BLANK">-Seleccionar Ciudad / Provincia-</option>
-				<?php
-				//mengambil nama-nama provinsi yang ada di database
-				$kota=mysql_query("SELECT * FROM kabkot ORDER BY nama_kabkot ");
-				while ($kab=mysql_fetch_array($kota)) {
-					echo "<option value=\"$kota[id_kabkot]\">$kota[nama_kabkot]</option>\n";
-				}
-				?>
-				</select>
+			 <select type="text" id="kota" name="kota">
+                        <option value="0">-Seleccione Region-</option>
+                        <?php
+                        //MENGAMBIL NAMA KOTA DI DATABASE
+                        $kota=@mysql_query("SELECT * FROM kabkot ORDER BY nama_kabkot");
+                        while ($dataKota=mysql_fetch_array($kota)) {
+                            if ($dataKota['id_kabkot']==$hsl_plg['id_kabkot']) {
+                                $cek ="selected";
+                            }
+                            else{
+                                $cek ="";
+                            }
+                            echo "<option value='$dataKota[id_kabkot]' $cek>$dataKota[nama_kabkot]</option>\n";
+                        }
+                        ?>
+                    </select>
 			</div>
 		</div>
 		<div class="control-group">
-			<label class="control-label" for="country">Distrito<sup>*</sup></label>
+			<label class="control-label" for="country">Pais<sup>*</sup></label>
 			<div class="controls">
 			  <select type="text" id="kec" name="kec" >
-				<option value="BLANK">-Seleccionar Distrito-</option>
-				
+				<option value="0">-Seleccionar Pais-</option>
+				<option value="1">Chile </option>
+			    <option value="1">Argentina </option>
+			     <option value="1">Brasil </option>
+			      <option value="1">Peru </option>
+			       <option value="1">Bolivia</option>
 			</select>
 			</div>
 		</div>
@@ -317,14 +412,14 @@ Para simplificar el proceso de pedido, debe registrarse en el siguiente formular
 		<div class="control-group">
 			<label class="control-label" for="phone">Celular <sup>*</sup></label>
 			<div class="controls">
-			  <input type="text"  name="txtPhone" id="phone" placeholder="Celular" required> <span>Usted debe registrarse al menos un número de Teléfono o Celular</span>
+			  <input type="text"  name="txtPhone" id="phone" placeholder="Celular" onkeypress="return justNumbers(event);" required> <span>Usted debe registrarse al menos un número de Teléfono o Celular</span>
 			</div>
 		</div>
 		
 		<div class="control-group">
 			<label class="control-label" for="mobile">Telefono Fijo<sup>*</sup></label>
 			<div class="controls">
-			  <input type="text"  name="txtMobile"  id="mobile" placeholder="Telefono" required />
+			  <input type="text"  name="txtMobile"  id="mobile" onkeypress="return justNumbers(event);" placeholder="Telefono" required />
 			</div>
 		</div>
 
@@ -332,19 +427,19 @@ Para simplificar el proceso de pedido, debe registrarse en el siguiente formular
         <div class="control-group">
         	<label class="control-label" for="inputUsername">Nombre de Usuario<sup>*</sup></label>
         	<div class="controls">
-        		<input type="text" name="txtUsername"  id="inputUsername" placeholder="Usuario" required>
+        		<input type="text" name="txtUsername" maxlength="20"  id="inputUsername" placeholder="Usuario" required>
         	</div>
         </div>
         <div class="control-group">
             <label class="control-label" for="inputEmail">Email <sup>*</sup></label>
             <div class="controls">
-                <input type="text" name="txtEmail" id="inputEmail"  placeholder="Correo Electronico" required>
+                <input type="text" name="txtEmail" id="inputEmail" maxlength="40" placeholder="Correo Electronico" required>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="inputPassword">Contraseña <sup>*</sup></label>
             <div class="controls">
-                <input type="password" name="txtPassword"  id="inputPassword" placeholder="Contraseña" required>
+                <input type="password" name="txtPassword" maxlength="10" id="inputPassword" placeholder="Contraseña" required>
             </div>
         </div>
        <div >
@@ -374,10 +469,11 @@ Para simplificar el proceso de pedido, debe registrarse en el siguiente formular
         <p><sup>(*)</sup>Campos Obligatorios</p>
 	
 	<div class="control-group">
+	<div id="message"></div>
 			<div class="controls">
 				<input type="hidden" name="email_create" value="1">
 				<input type="hidden" name="is_new_customer" value="1">
-				<input class="btn btn-large" type="submit" name="btnRegister" value="Registrarse" />
+				<input class="btn btn-large" type="submit" id="registrar" name="btnRegister" value="Registrarse" />
 			</div>
 		</div>		
 	</form>
