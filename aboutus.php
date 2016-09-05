@@ -48,11 +48,11 @@
     </ul>
 	<h3> Sobre Nosotros</h3>	
 	<hr class="soft"/>
-	<h3><font color="red"></font> <font color="green">Platea21</font></h3><br/>
+	<h3><font color="red"></font> <font color="green">San Fernando Store</font></h3><br/>
 	<p>
         <font face:'comic sans';></font></p>
         
-      <p>Somos Platea21 una empresa dedicada al diseño web, promagracion de sistemas web informaticos, comercio electronico, banca y dinero digital, cuentas exchanger etc.</p>
+      <p>Somos San Fernando Store una empresa dedicada al diseño web, promagracion de sistemas web informaticos, comercio electronico, banca y dinero digital, cuentas exchanger etc.</p>
 
     <p></p>
 	

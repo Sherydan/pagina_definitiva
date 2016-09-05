@@ -480,14 +480,15 @@ left:500px;
 color:red;
 position:absolute;	
 top:110px;
-left:1130px;
+left:1090px;
 }
 
 #nombre2{
 color:white;
 position:absolute;	
 top:110px;
-left:1180px;
+left:1140px;
+
 }
 
 #mifooter{
@@ -497,4 +498,10 @@ position: static;
 #footerespacio{
 	position: relative;
 	left: 1000px;
+}
+
+#inicio_sesion_mio{
+
+	color:white;
+	
 }

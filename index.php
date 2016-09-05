@@ -45,6 +45,9 @@ include_once "library/inc.library.php";
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+   <script type="js/bootstrap.min.js"></script>
   </head>
 <body>
 <!-- header -->

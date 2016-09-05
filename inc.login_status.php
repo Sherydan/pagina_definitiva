@@ -1,5 +1,6 @@
 <script language="javascript" src="kalender.js"></script>
 <script type="text/javascript">
+<link href="style.css" type="text/css" rel="stylesheet"/>
 	document.write (hari+","+tanggal+" "+bulan+" "+tahun)
 </script>
 <?php 
@@ -31,12 +32,19 @@ if (isset($_SESSION['SES_PELANGGAN'])=="") {
 						  <label><b>Contraseña</b></label>
 							<input type="password" name ="txtPassword" class="span2" id="inputPassword" placeholder="Contraseña" required>
 						  </div>
-						  <div class="control-group">
+						  <div id="incio_sesion_mio">
+						   <div class="control-group">
+						  
 							<label>
-							<button type="submit" class="btn pull-right" name="btnLogin" >Iniciar Sesión</button><a class="btn pull-right" href='?open=DataBaru'>Registrarse</a>
+
+							<button type="submit" class="btn pull-right" name="btnLogin"  >Iniciar Sesión</button><a class="btn pull-right" href='?open=DataBaru'>Registrarse</a>
 							</label>
 							
                           </div>
+
+
+						  </div>
+						 
  </form>
 
 
