@@ -39,7 +39,7 @@ $NamaPelanggan = $_SESSION['SES_USERNAME'];
                         <th width="14%" bgcolor="#F5F5F5"><strong>Fecha</strong></th>
                         <th width="24%" bgcolor="#F5F5F5"><strong>Nombre Beneficiario</strong></th>
                         <th width="14%" align="right" bgcolor="#F5F5F5"><strong>Total</strong></th>
-                        <th width="23%" align="center" bgcolor="#F5f5f5"><strong>Gastos de Envio (S/.)</strong></th>
+                        <th width="23%" align="center" bgcolor="#F5f5f5"><strong>Gastos de Envio ($)</strong></th>
                         <th width="4%" align="center" bgcolor="#f5f5f5"><strong>Estado</strong></th>
                         <th width="4%" align="center" bgcolor="#F5F5F5"><strong>Herramientas</strong></th>
                     </tr>
@@ -95,8 +95,8 @@ $NamaPelanggan = $_SESSION['SES_USERNAME'];
       <td bgcolor="#FFFFFF"><?php echo $myData['no_pemesanan']; ?></td>
       <td bgcolor="#FFFFFF"><?php echo IndonesiaTgl($myData['tgl_pemesanan']); ?></td>
       <td bgcolor="#FFFFFF"><?php echo $myData['nama_penerima']; ?></td>
-      <td align="right" bgcolor="#FFFFFF">S/. <?php echo format_angka($totalHarga); ?></td>
-      <td align="right" bgcolor="#FFFFFF">S/. <?php echo format_angka($biayaKirim); ?></td>
+      <td align="right" bgcolor="#FFFFFF">$ <?php echo format_angka($totalHarga); ?></td>
+      <td align="right" bgcolor="#FFFFFF">$ <?php echo format_angka($biayaKirim); ?></td>
       <td align="center" bgcolor="#FFFFCC"><?php echo $myData['status_bayar']; ?></td>
                         <td align="center"><a href="?open=TransaksiDetail&Kode=<?php echo  $Kode; ?>" target="_self"><font color="red">VER</font></a><b>|</b><a href="?open=KonfirmasiPembayaran&Kode=<?php echo $Kode; ?>" target="_self"><font color="blue">CONFIRMAR</font></a></td>
 

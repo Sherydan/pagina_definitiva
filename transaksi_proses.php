@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by herry.
- * User: herry.prasetyo
- * Date: 5/4/2016
- * Time: 9:01 AM
- */
+
 
 include_once "inc.session.php";
 include_once "library/inc.connection.php";
