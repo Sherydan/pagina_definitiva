@@ -103,7 +103,7 @@ include_once "library/inc.library.php";
             <li class=""><a href="?open=Barang-Produk">Productos</a></li>
             <li class=""><a href="?open=About">Acerca</a></li>
             <li class=""><a href="?open=Contact-Us">Contactos</a></li>
-            <li class=""><a href="#">Noticias</a></li>
+            <li class=""><a href="?open=CaraPengembalian">Envios</a></li>
           </ul>
           
         <div id="nombre">       
