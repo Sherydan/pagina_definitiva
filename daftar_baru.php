@@ -34,7 +34,7 @@ if (isset($_GET['Aksi']) and $_GET['Aksi']=="Sukses") {
 
 
 
-//membuat validasi pada form
+//membuat validasi pada form hh
 $error_tuh="";
 if (isset($_POST['btnRegister'])) {
 $pesanError = array();
@@ -97,7 +97,7 @@ $Kepada = $_POST['txtUsername'];
 $link=
 "http://radjabangunan.net84.net/?open=Aktivasi&code=$kodeAktivasi";
 $pesan="Hola $_POST[txtUsername],
-Gracias por unirse a San Fernando Store. Disfrute de la experiencia de compras en línea con nosotros es seguro y conveniente, así de rápido.
+Gracias por unirse a San fernando store . Disfrute de la experiencia de compras en línea con nosotros es seguro y conveniente, así de rápido.
 Puede ponerse en contacto con nosotros si tiene alguna pregunta. Estamos dispuestos a ayudarle.
 Por favor, haga clic en este enlace para activar su cuenta. 
 $link
@@ -105,11 +105,7 @@ $link
 
 Saludos Cordiales, 
 
-<<<<<<< HEAD
 San fernando Store
-=======
-San Fernando Store
->>>>>>> origin/master
 
 ";
 $from="from : gorchor@gmail.com";
@@ -120,7 +116,7 @@ $from="from : gorchor@gmail.com";
         mail($txtEmail, $subjek,$pesan,$from);
 		$mySql ="INSERT INTO pelanggan (kd_pelanggan,nm_pelanggan,nm_belakang,kelamin,email,no_telepon,mobile,alamat,id_prov,id_kabkot,id_kec,kode_pos,username,password,status,kode_aktivasi,tgl_daftar) 
 			VALUES('$kodeBaru','$txtNamaLengkap','$txtlastName','$cmbGender','$txtEmail','$txtPhone','$txtMobile','$txtAlamat','$propinsi','$kota','$kec','$txtKodepos','$txtUsername',MD5('$txtPassword'),'N','$kodeAktivasi','$tanggal')";
-		$myQry = mysql_query($mySql,$koneksidb) or die("Error query insetar usuario".mysql_error());
+		$myQry = mysql_query($mySql,$koneksidb) or die("gagal simpan".mysql_error());
 		if ($myQry) {
 			# code...
 			echo "<meta http-equiv='refresh' content='0; url=?open=SuccessRegistration'>";
@@ -144,7 +140,7 @@ $dataProvinsi		=isset($_POST['cmbProvinsi']) ? $_POST['cmbProvinsi'] :'';
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>San Fernando Store</title>
+    <title>Tienda Online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -304,7 +300,7 @@ function justNumbers(e)
 	<div class="well">
 	<div class="alert alert-info">
 		
-		<strong>Bienvenidos</strong>  <font face="comic sans">En San Fernando Store, servicios de comercio electrónico.
+		<strong>Bienvenidos</strong>  <font face="comic sans">En San fernando Store en línea, servicios de comercio electrónico.
 Estamos dispuestos a servirle para conseguir una experiencia de compra agradable de productos electronicos y otras categorías.
 Para simplificar el proceso de pedido, debe registrarse en el siguiente formulario.</font></div>
 	 <div class="alert alert-block alert-error fade in">
