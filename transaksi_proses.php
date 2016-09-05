@@ -170,9 +170,7 @@ function validarTarjetas(){
 
    
   
-  } else {
-     $("#message").html("<div class=\"alert alert-success\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button> Numero de tarjeta Visa Valido </div>");
-  }
+  } 
 
 }
 var htmlobjek;
@@ -203,8 +201,14 @@ var mipassword = $("#clavetarjeta").val();
 
   }else if (miemail == "" || !expr.test(miemail)) {
       $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor ingrese su email valido</div>");
+
+ }else if ($("#methodpayment option:selected").val() == 0) {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor ingrese metodode pago valido </div>");
+
   }else if (mivisa == "" || !mivisa.match(/^4\d{3}-?\d{4}-?\d{4}-?\d{4}$/)) {
       $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Porfavor ingrese un numero  de tarjeta valido</div>");
+ }else if (mipassword == "") {
+      $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Porfavor ingrese una clave</div>");
 
   }else if ($("#propinsi option:selected").val() == 0) {
       $("#message").html("<div class=\"alert alert-danger alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Por favor seleccione alguna Ciudad</div>");
@@ -406,8 +410,8 @@ function justNumbers(e)
                 <td><label class="control-label">Metodo de Pago</label></td>
                 <td><div class="controls">
                     <select type="text" id="methodpayment" name="cmbPayment">
-                        <option value="BLANK">-Seleccione Metodo de Pago- </option>
-                          <option value="2">Visa</option>
+                        <option value="0">-Seleccione Metodo de Pago- </option>
+                          <option value="1"> Trasferencia bancaria Visa</option>
                    
 
                     </select><font color="Red"> <b>Seleccione Metodo de Pago</b></font>
@@ -453,7 +457,7 @@ function justNumbers(e)
                 </div></td>
                 <td><div class="controls">
                     <select type="text" id="kota" name="kota">
-                        <option value="0">-Seleccione Region-</option>
+                        <option value="0">-Seleccione comuna-</option>
                         <?php
                         //MENGAMBIL NAMA KOTA DI DATABASE
                         $kota=@mysql_query("SELECT * FROM kabkot ORDER BY nama_kabkot");
@@ -477,7 +481,7 @@ function justNumbers(e)
                 <td>
                     <div class="controls">
                         <select type="text" id="kec" name="kec">
-                            <option value="0">-Seleccione Distrito-</option>
+                            <option value="0">-Seleccione pais-</option>
                             <?php
                             //MENGAMBIL NAMA KECAMATAN DARI DATABASE
                             $kec=mysql_query("SELECT * FROM kec ORDER BY nama_kec");
